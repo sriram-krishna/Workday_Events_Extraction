@@ -22,4 +22,4 @@ class Config:
     # Azure Blob Storage settings
     AZURE_STORAGE_CONNECTION_STRING: str = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
     AZURE_CONTAINER_NAME: str = os.getenv("AZURE_CONTAINER_NAME")
-    AZURE_BLOB_PREFIX: str = os.getenv("AZURE_BLOB_PREFIX", "wdevents")
+    AZURE_BLOB_PREFIX: str = os.getenv("AZURE_BLOB_PREFIX")
