@@ -1,0 +1,6 @@
+.env
+*.log
+*.csv
+__pycache__/
+.env.*
+.DS_Store
