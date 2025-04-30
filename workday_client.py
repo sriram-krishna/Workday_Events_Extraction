@@ -55,7 +55,7 @@ class WorkdaySpendApiClient:
                     url = payload.get("links", {}).get("next")
                     time.sleep(0.25)  # throttle to respect rate limits
                 else:
-                    return payload
+                    return payload.get("data", [])
 
             return all_data if paginated else None
 

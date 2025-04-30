@@ -19,6 +19,8 @@ def main():
         datefmt="%Y-%m-%d %H:%M:%S"
     )
 
+    logging.getLogger("azure.storage.blob").setLevel(logging.WARNING)
+
     start_time = datetime.now()
     logging.info("=== Workday Import Started ===")
 
@@ -61,7 +63,7 @@ def main():
         logging.info(f"Uploaded event JSON for event {event_id} to: {event_blob_path}")
 
         # Upload list of attachments for this event
-        attachments = event.get("attachments", [])
+        attachments = event.get().get ("attachments", [])
         attachments_blob_path = f"{Config.AZURE_BLOB_PREFIX.rstrip('/')}/{event_id}/attachments/attachments.json"
         upload_json_to_blob(data=attachments, blob_path=attachments_blob_path)
         logging.info(f"Uploaded attachments metadata for event {event_id} to: {attachments_blob_path}")
