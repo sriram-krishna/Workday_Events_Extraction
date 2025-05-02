@@ -14,7 +14,6 @@ class Config:
     # API settings
     API_BASE_URL: str = os.getenv("API_BASE_URL")
     API_EVENTS_ENDPOINT: str = os.getenv("API_EVENTS_ENDPOINT")
-    API_ATTACHMENTS_ENDPOINT: str = os.getenv("API_ATTACHMENTS_ENDPOINT")
     API_KEY: str = os.getenv("API_KEY")
     USER_TOKEN: str = os.getenv("USER_TOKEN")
     USER_EMAIL: str = os.getenv("USER_EMAIL")
@@ -23,3 +22,9 @@ class Config:
     AZURE_STORAGE_CONNECTION_STRING: str = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
     AZURE_CONTAINER_NAME: str = os.getenv("AZURE_CONTAINER_NAME")
     AZURE_BLOB_PREFIX: str = os.getenv("AZURE_BLOB_PREFIX")
+
+    # Workday URLs
+    WD_LOGIN_URL: str = os.getenv("WD_LOGIN_URL")
+    WD_HOME_URL: str = os.getenv("WD_HOME_URL")
+    WD_ATTACHMENTS_URL: str = os.getenv("WD_ATTACHMENTS_URL")
+    WD_BID_EXPORT_URL: str = os.getenv("WD_BID_EXPORT_URL")

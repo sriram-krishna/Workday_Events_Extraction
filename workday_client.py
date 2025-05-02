@@ -33,7 +33,7 @@ class WorkdaySpendApiClient:
         if not endpoint:
             raise ValueError("Endpoint is required.")
 
-        url = f"{self.base_url}{endpoint}"
+        url = f"{self.base_url}{endpoint}?page[size]=100"
         all_data = []
 
         try:
