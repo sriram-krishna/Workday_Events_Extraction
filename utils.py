@@ -78,7 +78,7 @@ def download_event(event_id: str, page: Page) -> list[str]:
         # 1. Download from Attachments page
         page.goto(f"{Config.WD_HOME_URL}/{event_id}{Config.WD_ATTACHMENTS_URL}")
         page.wait_for_load_state("networkidle")
-        page.click("[data-role='download-button']")
+        page.click("[data-role='force-download-all-files-btn']")
         page.wait_for_selector("[data-role='confirm']", timeout=Config.DOWNLOAD_TIMEOUT)
         confirm_btn = page.locator("[data-role='confirm']")
         confirm_etl = confirm_btn.element_handle()

@@ -5,11 +5,10 @@ from datetime import datetime
 from tqdm import tqdm
 from playwright.sync_api import sync_playwright
 
-from config import Config
+from config import Config, setup_logging
 from workday_client import WorkdaySpendApiClient
 from az_blob_utils import upload_to_blob
 from utils import (
-    setup_logging,
     initialize_csv,
     load_progress,
     save_progress,
