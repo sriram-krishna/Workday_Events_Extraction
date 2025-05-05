@@ -1,6 +1,46 @@
-.env
-*.log
-*.csv
+# === Python ===
 __pycache__/
-.env.*
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# === Virtual Environments ===
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+
+# === Environment Configuration ===
+# Ignore real env files, but keep templates
+.env
+!.env.template
+
+# === VSCode/IDE ===
+.vscode/
+.idea/
+*.swp
+
+# === Logs ===
+*.log
+*.log.*
+
+# === Data Outputs ===
+*.csv
+*.xlsx
+*.zip
+*.json
+progress.json
+downloaded_files.csv
+temp_downloads/
+
+# === Playwright ===
+playwright-report/
+test-results/
+*.webm
+*.trace.zip
+
+# === System Files ===
 .DS_Store
+Thumbs.db
